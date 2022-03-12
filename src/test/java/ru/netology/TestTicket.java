@@ -1,13 +1,14 @@
 package ru.netology;
 
 import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 import ru.netology.repository.Ticket;
 import ru.netology.domain.TicketData;
 import ru.netology.manager.ManagerTicket;
-
-
 
 
 public class TestTicket {
@@ -18,6 +19,7 @@ public class TestTicket {
     TicketData ticketData4 = new TicketData(5, 8, "LED", "EGO", 90);
     Ticket ticket = new Ticket();
     ManagerTicket managerTicket = new ManagerTicket();
+
     @Test
     void testSort() {
         managerTicket.add(ticketData);
@@ -62,8 +64,8 @@ public class TestTicket {
         managerTicket.add(ticketData1);
         managerTicket.add(ticketData3);
         managerTicket.add(ticketData4);
-        TicketData[]  expected = new TicketData[]{};
-        assertArrayEquals(expected,managerTicket.scan("Test", "Test1"));
+        TicketData[] expected = new TicketData[]{};
+        assertArrayEquals(expected, managerTicket.scan("Test", "Test1"));
     }
 
     @Test
@@ -74,8 +76,8 @@ public class TestTicket {
         managerTicket.add(ticketData3);
         managerTicket.add(ticketData4);
         managerTicket.scan("LED", "Test1");
-        TicketData[]  expected = new TicketData[]{};
-        assertArrayEquals(expected,managerTicket.scan("LED", "Test1"));
+        TicketData[] expected = new TicketData[]{};
+        assertArrayEquals(expected, managerTicket.scan("LED", "Test1"));
     }
 
 

@@ -15,7 +15,7 @@ public class ManagerTicket {
         this.ticket = new Ticket();
     }
 
-    public  TicketData[]  scan(String from, String to) {
+    public TicketData[] scan(String from, String to) {
         int i = 0;
         Ticket ticketTMP = new Ticket();
         TicketData[] result = new TicketData[ticket.getItemsLength()];// тут будем хранить подошедшие запросу продукты

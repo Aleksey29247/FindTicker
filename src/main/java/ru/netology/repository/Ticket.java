@@ -6,7 +6,6 @@ public class Ticket {
     private TicketData[] items = new TicketData[0];
 
 
-
     public void add(TicketData item) {
 
         int length = items.length + 1;
@@ -21,11 +20,12 @@ public class Ticket {
         return items;
 
     }
-    public int getItemsLength()
-    {
+
+    public int getItemsLength() {
         return items.length;
     }
-    public  void sort() {
+
+    public void sort() {
         TicketData tmp;
         for (int i = items.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
